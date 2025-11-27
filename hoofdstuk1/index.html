@@ -16,6 +16,8 @@
         <link rel="prev" href="..">
       
       
+        <link rel="next" href="../1-getting-started/">
+      
       
         
       
@@ -68,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-syntax-error" class="md-skip">
+        <a href="#hoofdstuk-1-eerste-python-code" class="md-skip">
           Skip to content
         </a>
       
@@ -236,6 +238,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hoofdstuk 1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -253,6 +273,74 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#oefening-1-standaard-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oefening 1 – Standaard editor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oefening-2-soma-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oefening 2 – som(a, b)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    oefening 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -277,6 +365,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#oefening-1-standaard-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oefening 1 – Standaard editor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oefening-2-soma-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oefening 2 – som(a, b)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -292,11 +410,74 @@
 
 
 
-<h1 id="macro-syntax-error"><em>Macro Syntax Error</em><a class="headerlink" href="#macro-syntax-error" title="Permanent link">&para;</a></h1>
-<p><em>File</em>: <code>hoofdstuk1.md</code></p>
-<p><em>Line 2 in Markdown file:</em> <strong>unexpected char '\' at 69</strong></p>
-<div class="codehilite"><pre><span></span><code>
-</code></pre></div>
+<h1 id="hoofdstuk-1-eerste-python-code">Hoofdstuk 1 – Eerste Python-code<a class="headerlink" href="#hoofdstuk-1-eerste-python-code" title="Permanent link">&para;</a></h1>
+<h2 id="oefening-1-standaard-editor">Oefening 1 – Standaard editor<a class="headerlink" href="#oefening-1-standaard-editor" title="Permanent link">&para;</a></h2>
+<p>Hier kan de leerling vrij experimenteren.</p>
+<p><div
+  class="python-editor"
+  data-initial-code="print('Hallo leerling!')
+for i in range(3):
+    print(i)"
+></div>
+</p>
+<p><button class="python-run">Run</button></p>
+<p><pre
+  class="python-output"
+  style="background: #272822; color: #f8f8f2; padding: 10px; min-height: 100px"
+></pre>
+</p>
+<hr />
+<h2 id="oefening-2-soma-b">Oefening 2 – som(a, b)<a class="headerlink" href="#oefening-2-soma-b" title="Permanent link">&para;</a></h2>
+<p>Schrijf een functie <code>som(a, b)</code> die de som van twee getallen teruggeeft.</p>
+<p>De tests controleren o.a.:</p>
+<ul>
+<li><code>som(1, 2)</code> → <code>3</code></li>
+<li><code>som(5, 7)</code> → <code>12</code></li>
+<li><code>som(-1, 1)</code> → <code>0</code></li>
+</ul>
+<p><div
+  class="python-editor"
+  data-initial-code="
+def som(a, b): # Schrijf hier je code
+return 0
+"
+  data-tests="
+[
+["som(1, 2)", 3],
+["som(5, 7)", 12],
+["som(-1, 1)", 0]
+]
+"
+></div>
+</p>
+<p><button class="python-run">Run</button>
+<button class="python-check">Nakijken</button></p>
+<div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem">
+  <div style="flex: 1; min-width: 220px">
+    <strong>Output:</strong>
+    <pre
+      class="python-output"
+      style="
+        background: #272822;
+        color: #f8f8f2;
+        padding: 10px;
+        min-height: 80px;
+      "
+    ></pre>
+  </div>
+  <div style="flex: 1; min-width: 220px">
+    <strong>Tests:</strong>
+    <pre
+      class="python-feedback"
+      style="
+        background: #1e1e1e;
+        color: #f8f8f2;
+        padding: 10px;
+        min-height: 80px;
+      "
+    ></pre>
+  </div>
+</div>
 
 
 

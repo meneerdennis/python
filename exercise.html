@@ -1,20 +1,36 @@
-<div class="python-editor"
-     data-initial-code="{{ code | default(\"def som(a, b):\\n    return 0\") }}"
-     data-tests="{{ tests | default('[]') }}">
-</div>
+<div
+  class="python-editor"
+  data-initial-code="{{ code | default('def som(a, b):
+    return 0') }}"
+  data-tests="{{ tests | default('[]') }}"
+></div>
 
 <button class="python-run">Run</button>
 <button class="python-check">Nakijken</button>
 
-<div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:0.5rem;">
-  <div style="flex:1; min-width:220px;">
+<div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem">
+  <div style="flex: 1; min-width: 220px">
     <strong>Output:</strong>
-    <pre class="python-output"
-         style="background:#272822; color:#f8f8f2; padding:10px; min-height:80px;"></pre>
+    <pre
+      class="python-output"
+      style="
+        background: #272822;
+        color: #f8f8f2;
+        padding: 10px;
+        min-height: 80px;
+      "
+    ></pre>
   </div>
-  <div style="flex:1; min-width:220px;">
+  <div style="flex: 1; min-width: 220px">
     <strong>Tests:</strong>
-    <pre class="python-feedback"
-         style="background:#1e1e1e; color:#f8f8f2; padding:10px; min-height:80px;"></pre>
+    <pre
+      class="python-feedback"
+      style="
+        background: #1e1e1e;
+        color: #f8f8f2;
+        padding: 10px;
+        min-height: 80px;
+      "
+    ></pre>
   </div>
 </div>
