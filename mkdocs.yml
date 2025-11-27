@@ -1,0 +1,29 @@
+site_name: Python Cursus
+site_description: Leerpad Python voor leerlingen
+site_author: Jij :)
+
+theme:
+  name: material
+
+nav:
+  - Start: index.md
+  - Hoofdstuk 1: hoofdstuk1.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - macros
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js
+  - https://cdn.jsdelivr.net/pyodide/v0.26.0/full/pyodide.js
+  - js/editor.js
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css
