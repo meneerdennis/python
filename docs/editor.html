@@ -1,17 +1,30 @@
-<div class="python-editor-container">
-  <div
-    class="python-editor"
-    data-initial-code="{{ code | default('print(\'Hallo leerling!\')
+<div class="exercise-container">
+  <div class="exercise-header">
+    <div class="exercise-actions">
+      <button class="python-run">Run Code</button>
+      <button class="python-check">Check Tests</button>
+    </div>
+  </div>
+
+  <div class="python-editor-container">
+    <div
+      class="python-editor"
+      data-initial-code="{{ code | default('print(\'Hallo leerling!\')
 for i in range(3):
     print(i)') }}"
-  ></div>
-</div>
+      data-tests="{{ tests | default('[]') }}"
+    ></div>
+  </div>
 
-<div class="exercise-actions">
-  <button class="python-run">Run Code</button>
-</div>
+  <div class="exercise-content">
+    <div class="exercise-panel">
+      <div class="exercise-panel-title">Output</div>
+      <pre class="python-output"></pre>
+    </div>
 
-<div class="exercise-panel">
-  <div class="exercise-panel-title">Output</div>
-  <pre class="python-output"></pre>
+    <div class="exercise-panel tests-panel">
+      <div class="exercise-panel-title">Test Results</div>
+      <pre class="python-feedback"></pre>
+    </div>
+  </div>
 </div>

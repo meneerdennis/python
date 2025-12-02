@@ -61,15 +61,7 @@ Schrijf een programma dat een emoticon afdrukt: :-)
 
 {% endset %}
 
-{% set tests %}
-[
-{ "syntax": "print(\":-)\")" }
-]
-{% endset %}
-
-{% include "exercise.html" %}
-
-{% include "exercise.html" %}
+{% include "editor.html" %}
 
 ## Een programma met meerdere commando's
 
