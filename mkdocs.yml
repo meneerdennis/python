@@ -4,10 +4,13 @@ site_author: Jij :)
 
 theme:
   name: material
+  features:
+    - navigation.path
 
 nav:
   - Start: index.md
-  - Hoofdstuk 1: hoofdstuk1.md
+  - Hoofdstuk 1:
+      - Les 1: /H1/1-getting-started
 
 markdown_extensions:
   - admonition
@@ -27,3 +30,4 @@ extra_javascript:
 
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css
+  - css/editor-styles.css

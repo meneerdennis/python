@@ -53,11 +53,23 @@ SyntaxError: invalid syntax
 
 Samenvattend, als je tekst wilt afdrukken, moet de tekst volledig tussen aanhalingstekens staan, anders zal Python het niet correct interpreteren.
 
-<in-browser-programming-exercise name="Emoticon" tmcname="part01-01_emoticon" height="300px">
-
 Schrijf een programma dat een emoticon afdrukt: :-)
 
-</in-browser-programming-exercise>
+{% set code %}
+
+# schrijf hier je code:
+
+{% endset %}
+
+{% set tests %}
+[
+{ "syntax": "print(\":-)\")" }
+]
+{% endset %}
+
+{% include "exercise.html" %}
+
+{% include "exercise.html" %}
 
 ## Een programma met meerdere commando's
 

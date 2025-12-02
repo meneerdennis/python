@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Exercise</title>
+
+    <!-- CodeMirror CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
+    />
+    <link rel="stylesheet" href="css/editor-styles.css" />
+  </head>
+  <body>
+    <h1>Test Exercise</h1>
+
+    <!-- Include the exercise.html content -->
+    <div class="exercise-container">
+      <div class="exercise-header">
+        <div class="exercise-actions">
+          <button class="python-run">Run Code</button>
+          <button class="python-check">Check Tests</button>
+        </div>
+      </div>
+
+      <div class="python-editor-container">
+        <div
+          class="python-editor"
+          data-initial-code="def som(a, b):
+    return 0"
+          data-tests='[{"syntax": "print(\":-)\")"}]'
+        ></div>
+      </div>
+
+      <div class="exercise-content">
+        <div class="exercise-panel">
+          <div class="exercise-panel-title">Output</div>
+          <pre class="python-output"></pre>
+        </div>
+
+        <div class="exercise-panel tests-panel">
+          <div class="exercise-panel-title">Test Results</div>
+          <pre class="python-feedback"></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.26.0/full/pyodide.js"></script>
+    <script src="js/editor.js"></script>
+  </body>
+</html>
