@@ -1,0 +1,605 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Leerpad Python voor leerlingen">
+      
+      
+        <meta name="author" content="Jij :)">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Information from the user - Python Cursus</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    
+      <link rel="stylesheet" href="../../css/editor-styles.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#referencing-a-variable" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Python Cursus" class="md-header__button md-logo" aria-label="Python Cursus" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Cursus
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Information from the user
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Cursus" class="md-nav__button md-logo" aria-label="Python Cursus" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Python Cursus
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hoofdstuk 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hoofdstuk 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/H1/1-getting-started" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#referencing-a-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencing a variable
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-than-one-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        More than one input
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Information from the user</h1>
+
+<p><text-box variant='learningObjectives' name='Learning objectives'></p>
+<p>After this section</p>
+<ul>
+<li>You will know how to write a program which uses input from the user</li>
+<li>You will know how to use variables to store input and print it out</li>
+<li>You will be able to combine strings</li>
+</ul>
+<p></text-box></p>
+<p><em>Input</em> refers to any information a user gives to the program. Specifically, the Python command <code>input</code> reads in a line of input typed in by the user. It may also be used to display a message to the user, to prompt for specific input.</p>
+<p>The following program reads in the name of the user with the <code>input</code> command. It then prints it out with the <code>print</code> command:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name? &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi there, &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+</code></pre></div>
+
+<p>The execution of this program could look like this (input from the user in red):</p>
+<p><sample-output></p>
+<p>What is your name? <strong>Paul Python</strong>
+Hi there, Paul Python</p>
+<p></sample-output></p>
+<p>What this program prints out is partially dependent on input from the user. That means the execution of the program could also look like this:</p>
+<p><sample-output></p>
+<p>What is your name? <strong>Paula Programmer</strong>
+Hi there, Paula Programmer</p>
+<p></sample-output></p>
+<p>The word <code>name</code> in this program is a <em>variable</em>. In the context of programming, a variable is a location for storing some <em>value</em>, such as a string or a number. This value can be used later, and it can also be changed.</p>
+<p><text-box variant="hint" name="Naming variables"></p>
+<p>In principle, variables can be named quite freely, within certain limits specified in the Python language.</p>
+<p>It is a common international programming practice to name variables in English, but you may come across code where variables are named in other languages, such as the native language of the programmer. The name of the variable has no direct effect on its content, so the name, in that sense, does not matter. However, it can often be helpful in understanding how code functions if variables are named logically and in English.</p>
+<p></text-box></p>
+<p><in-browser-programming-exercise name="Name twice" tmcname="part01-06_name_twice"></p>
+<p>Please write a program which asks for the user's name and then prints it twice, on two consecutive lines.</p>
+<p>An example of the how the program should function:</p>
+<p><sample-output></p>
+<p>What is your name? <strong>Paul</strong>
+Paul
+Paul</p>
+<p></sample-output></p>
+<p></in-browser-programming-exercise></p>
+<h2 id="referencing-a-variable">Referencing a variable<a class="headerlink" href="#referencing-a-variable" title="Permanent link">&para;</a></h2>
+<p>A single variable can be referred to many times in a program:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name? &quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; is quite a nice name.&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>If the user gives the name <code>Paul Python</code>, this program prints out the following:</p>
+<p><sample-output></p>
+<p>What is your name? <strong>Paul Python</strong>
+Hi, Paul Python!
+Paul Python is quite a nice name.</p>
+<p></sample-output></p>
+<p>Let's have a closer look at the way the <code>print</code> command is used above. Within the brackets of the command there is both text in quotation marks as well as variable names which refer to input from the user. These have been combined with a <code>+</code> operator, which <em>concatenates</em> two strings into a single string.</p>
+<p>Strings and variables can be combined quite freely:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name? &quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;! Let me make sure: your name is &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;?&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>If the user gives the name <code>Ellen Example</code> this prints out</p>
+<p><sample-output></p>
+<p>What is your name? <strong>Ellen Example</strong>
+Hi Ellen Example! Let me make sure: your name is Ellen Example?</p>
+<p></sample-output></p>
+<p><in-browser-programming-exercise name="Name and exclamation marks" tmcname="part01-07_name_and_exclamation_marks"></p>
+<p>Please write a program which asks for the user's name and then prints it out twice on a single line so that there is an exclamation mark at the beginning of the line, another between the two names and a third one at the end of the line.</p>
+<p>The program should function as follows:</p>
+<p><sample-output></p>
+<p>What is your name? <strong>Paul</strong>
+!Paul!Paul!</p>
+<p></sample-output></p>
+<p></in-browser-programming-exercise></p>
+<h2 id="more-than-one-input">More than one input<a class="headerlink" href="#more-than-one-input" title="Permanent link">&para;</a></h2>
+<p>A program can ask for more than one input. Notice how below each <code>input</code> command stores the received value in a different variable.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name? &quot;</span><span class="p">)</span>
+<span class="n">email</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your email address? &quot;</span><span class="p">)</span>
+<span class="n">nickname</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your nickname? &quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Let&#39;s make sure we got this right&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your name: &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your email address: &quot;</span> <span class="o">+</span> <span class="n">email</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your nickname: &quot;</span> <span class="o">+</span> <span class="n">nickname</span><span class="p">)</span>
+</code></pre></div>
+
+<p>The program could print out this, for example:</p>
+<p><sample-output></p>
+<p>What is your name? <strong>Frances Fictitious</strong>
+What is your email address? <strong>frances99@example.com</strong>
+What is your nickname? <strong>Fran</strong>
+Let's make sure we got this right
+Your name: Frances Fictitious
+Your email address: frances99@example.com
+Your nickname: Fran</p>
+<p></sample-output></p>
+<p>If the same variable is used to store more than one input, each new value will replace the previous one. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">address</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your address? &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;So you live at address &quot;</span> <span class="o">+</span> <span class="n">address</span><span class="p">)</span>
+
+<span class="n">address</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please type in a new address: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your address is now &quot;</span> <span class="o">+</span> <span class="n">address</span><span class="p">)</span>
+</code></pre></div>
+
+<p>An example execution of the program:</p>
+<p><sample-output></p>
+<p>What is your address? <strong>Python Path 101, Flat 3D</strong>
+So you live at address Python Path 101, Flat 3D
+Please type in a new address: <strong>New Road 999</strong>
+Your address is now New Road 999</p>
+<p></sample-output></p>
+<p>This means that if the same variable is used to store two inputs in succession, there is no way to access the first input value after it has been replaced by the second:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">address</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your address? &quot;</span><span class="p">)</span>
+<span class="n">address</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please type in a new address: &quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your address is now &quot;</span> <span class="o">+</span> <span class="n">address</span><span class="p">)</span>
+</code></pre></div>
+
+<p>An example of how the program's output might look like:</p>
+<p><sample-output></p>
+<p>What is your address? <strong>Python Path 10</strong>
+Please type in a new address: <strong>Programmer's Walk 23</strong>
+Your address is now Programmer's Walk 23</p>
+<p></sample-output></p>
+<p><in-browser-programming-exercise name="Name and address" tmcname="part01-08_name_and_address"></p>
+<p>Please write a program which asks for the user's name and address. The program should also print out the given information, as follows:</p>
+<p><sample-output></p>
+<p>Given name: <strong>Steve</strong>
+Family name: <strong>Sanders</strong>
+Street address: <strong>91 Station Road</strong>
+City and postal code: <strong>London EC05 6AW</strong>
+Steve Sanders
+91 Station Road
+London EC05 6AW</p>
+<p></sample-output></p>
+<p></in-browser-programming-exercise></p>
+<p><in-browser-programming-exercise name="Fix the code: Utterances" tmcname="part01-09_utterances"></p>
+<p>Here is a program which should ask for three utterances and print them out, like so:</p>
+<p><sample-output></p>
+<p>The 1st part: <strong>hickory</strong>
+The 2nd part: <strong>dickory</strong>
+The 3rd part: <strong>dock</strong>
+hickory-dickory-dock!</p>
+<p></sample-output></p>
+<p>However, there is something wrong with the code below. Please fix it.</p>
+<p></in-browser-programming-exercise></p>
+<p><in-browser-programming-exercise name="Story" tmcname="part01-10_story"></p>
+<p>Please write a program which prints out the following story. The user gives a name and a year, which should be inserted into the printout.</p>
+<p><sample-output></p>
+<p>Please type in a name: <strong>Mary</strong>
+Please type in a year: <strong>1572</strong></p>
+<p>Mary is a valiant knight, born in the year 1572. One morning Mary woke up to an awful racket: a dragon was approaching the village. Only Mary could save the village's residents.</p>
+<p></sample-output></p>
+<p>The story should change according to the input given by the user.</p>
+<p></in-browser-programming-exercise></p>
+<!--
+
+A quiz to review the contents of this section:
+
+<quiz id="10cb3510-d8a6-5e9b-b372-c85c4c7eb957"></quiz>
+
+-->
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.path"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.26.0/full/pyodide.js"></script>
+      
+        <script src="../../js/editor.js"></script>
+      
+    
+  </body>
+</html>

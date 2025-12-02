@@ -1,8 +1,17 @@
-<div class="python-editor"
-     data-initial-code="{{ code | default(\"print('Hallo leerling!')\\nfor i in range(3):\\n    print(i)\") }}">
+<div class="python-editor-container">
+  <div
+    class="python-editor"
+    data-initial-code="{{ code | default('print(\'Hallo leerling!\')
+for i in range(3):
+    print(i)') }}"
+  ></div>
 </div>
 
-<button class="python-run">Run</button>
+<div class="exercise-actions">
+  <button class="python-run">Run Code</button>
+</div>
 
-<pre class="python-output"
-     style="background:#272822; color:#f8f8f2; padding:10px; min-height:100px;"></pre>
+<div class="exercise-panel">
+  <div class="exercise-panel-title">Output</div>
+  <pre class="python-output"></pre>
+</div>

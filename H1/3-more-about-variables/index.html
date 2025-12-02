@@ -1,0 +1,786 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Leerpad Python voor leerlingen">
+      
+      
+        <meta name="author" content="Jij :)">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>More about variables - Python Cursus</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    
+      <link rel="stylesheet" href="../../css/editor-styles.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changing-the-value-of-a-variable" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Python Cursus" class="md-header__button md-logo" aria-label="Python Cursus" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Cursus
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              More about variables
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Cursus" class="md-nav__button md-logo" aria-label="Python Cursus" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Python Cursus
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hoofdstuk 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hoofdstuk 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/H1/1-getting-started" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#changing-the-value-of-a-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changing the value of a variable
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-values-when-printing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining values when printing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#printing-with-f-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Printing with f-strings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floating-point-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Floating point numbers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>More about variables</h1>
+
+<p><text-box variant='learningObjectives' name='Learning objectives'></p>
+<p>After this section</p>
+<ul>
+<li>You will be able to use variables in different contexts</li>
+<li>You will know what kind of data can be stored in variables</li>
+<li>You will understand the difference between strings, integers and floating point numbers</li>
+</ul>
+<p></text-box></p>
+<p>Please fill in this questionnaire before getting started with this section. You will get one exercise point for answering.</p>
+<p><quiz id="514abebe-f5ca-54dc-bb62-feb9311f3e08"></quiz></p>
+<p>Variables are needed for various purposes in programming. You can use variables to store any information that will be needed later in the program's execution.</p>
+<p>In Python programming variables are created like so:</p>
+<p><code>variable_name = ...</code></p>
+<p>Here <code>...</code> means the value stored in the variable.</p>
+<p>For example, when you used the <code>input</code> command to read a string from the user, you stored the string in a variable and then used the variable later in your program:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name? &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi, &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+</code></pre></div>
+
+<p><sample-output></p>
+<p>What is your name? <strong>Ghosty</strong>
+Hi, Ghosty</p>
+<p></sample-output></p>
+<p>The value stored in a variable can also be defined using other variables:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">given_name</span> <span class="o">=</span> <span class="s2">&quot;Paul&quot;</span>
+<span class="n">family_name</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="n">given_name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">family_name</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div>
+
+<p><sample-output></p>
+<p>Paul Python</p>
+<p></sample-output></p>
+<p>Here the values stored in the three variables are not obtained from user input. They remain the same every time the program is executed. This is called <em>hard-coding</em> data into the program.</p>
+<h2 id="changing-the-value-of-a-variable">Changing the value of a variable<a class="headerlink" href="#changing-the-value-of-a-variable" title="Permanent link">&para;</a></h2>
+<p>As implied by the name <em>variable</em>, the value stored in a variable can change. In the previous section we noticed that the new value replaces the old one.</p>
+<p>During the execution of the following program, the variable <code>word</code> will have three different values:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please type in a word: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+
+<span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;And another word: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+
+<span class="n">word</span> <span class="o">=</span> <span class="s2">&quot;third&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+</code></pre></div>
+
+<p><sample-output></p>
+<p>Please type in a word: <strong>first</strong>
+first
+And another word: <strong>second</strong>
+second
+third</p>
+<p></sample-output></p>
+<p>The value stored in the variable changes each time the variable is assigned a new value.</p>
+<p>The new value of a variable can be derived from its old value. In the following example the variable <code>word</code> is first assigned a value based on user input. Then it is assigned a new value, which is the old value with three exclamation marks added to the end.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please type in a word: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+
+<span class="n">word</span> <span class="o">=</span> <span class="n">word</span> <span class="o">+</span> <span class="s2">&quot;!!!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+</code></pre></div>
+
+<p><sample-output></p>
+<p>Please type in a word: <strong>test</strong>
+test
+test!!!</p>
+<p></sample-output></p>
+<p><text-box variant="hint" name="Choosing a good name for a variable"></p>
+<ul>
+<li>
+<p>It is often useful to name variables according to what they are used for. For example, if the variable contains a word, the name <code>word</code> is a better choice than, say, <code>a</code>.</p>
+</li>
+<li>
+<p>There is no set limit to the length of a variable name in Python, but there are some other limitations. A variable name should begin with a letter, and it can only contain letters, numbers and underscores &#95;.</p>
+</li>
+<li>
+<p>Lowercase and uppercase letters are different characters. The variables <code>name</code>, <code>Name</code> and <code>NAME</code> are all different variables. While this rule has a few exceptions, we will ignore those for now.</p>
+</li>
+<li>
+<p>It is a common programming practice in Python to use only lowercase characters in variable names. If the variable name consists of multiple words, use an underscore between the words. While this rule also has a few exceptions, we will ignore those for now.</p>
+</li>
+</ul>
+<p></text-box></p>
+<h2 id="integers">Integers<a class="headerlink" href="#integers" title="Permanent link">&para;</a></h2>
+<p>Thus far, we have only stored strings in variables, but there are also many other types of information we will want to store and access later. Let's have a look at integers first. Integers are numbers that do not have a decimal or fractional part, such as <code>-15</code>, <code>0</code> and <code>1</code>.</p>
+<p>The following program creates the variable <code>age</code>, which contains an integer value.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+</code></pre></div>
+
+<p>The program prints out just this:</p>
+<p><sample-output></p>
+<p>24</p>
+<p></sample-output></p>
+<p>Notice the lack of quotation marks here. In fact, if we were to add quotation marks around the number, this would mean our variable would no longer be an integer, but a string instead. A string can contain numbers, but it is processed differently.</p>
+<p>So, why does it matter that variables have a type, when the following program still prints out the same thing twice?</p>
+<div class="codehilite"><pre><span></span><code><span class="n">number1</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">number2</span> <span class="o">=</span> <span class="s2">&quot;100&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">number1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">number2</span><span class="p">)</span>
+</code></pre></div>
+
+<p><sample-output></p>
+<p>100
+100</p>
+<p></sample-output></p>
+<p>Variable types matter because different operations affect different types of variables in different ways. Let's have a look at an example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">number1</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">number2</span> <span class="o">=</span> <span class="s2">&quot;100&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">number1</span> <span class="o">+</span> <span class="n">number1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">number2</span> <span class="o">+</span> <span class="n">number2</span><span class="p">)</span>
+</code></pre></div>
+
+<p>This prints out the following:</p>
+<p><sample-output></p>
+<p>200
+100100</p>
+<p></sample-output></p>
+<p>For integer values the <code>+</code> operator means addition, but for string values it means concatenation, or "stringing together".</p>
+<p>Not all operators are available for all types of variables. While numbers can be divided using the division operator <code>/</code>, attempting to divide a string by a number causes an error:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="s2">&quot;100&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">number</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+
+<p><sample-output>
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+</sample-output></p>
+<h2 id="combining-values-when-printing">Combining values when printing<a class="headerlink" href="#combining-values-when-printing" title="Permanent link">&para;</a></h2>
+<p>Similarly, the following program will not work, because <code>"The result is "</code> and <code>result</code> are of two different types:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">25</span>
+<span class="c1"># the following line produces an error</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The result is &quot;</span> <span class="o">+</span> <span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+
+<p>The program does not print out anything, but instead throws an error:</p>
+<p><sample-output></p>
+<p>TypeError: unsupported operand type(s) for +: 'str' and 'int'</p>
+<p></sample-output></p>
+<p>Here, Python tells us that combining two different types of values will not work just like that. In this case, <code>"The result is "</code> is of type string, while the value stored in <code>result</code> is of type integer.</p>
+<p>If we do want to print out a string and an integer in a single command, the integer can be cast as a string with the <code>str</code> function, and the two strings can then be combined normally. For example, this would work:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">25</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The result is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+</code></pre></div>
+
+<p><sample-output></p>
+<p>The result is 250</p>
+<p></sample-output></p>
+<p>The <code>print</code> command also has built-in functionalities that support combining different types of values. The simplest way is to add a comma between the values. All the values will be printed out regardless of their type:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">25</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The result is&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+
+<p><sample-output></p>
+<p>The result is 250</p>
+<p></sample-output></p>
+<p>Notice that there is an automatically added whitespace character between the values separated by a comma here.</p>
+<h2 id="printing-with-f-strings">Printing with f-strings<a class="headerlink" href="#printing-with-f-strings" title="Permanent link">&para;</a></h2>
+<p>What if we want to have more flexibility and control over what we print out? So called <em>f-strings</em> are another way of formatting printouts in Python. The syntax can initially look a bit confusing, but in the end f-strings are often the simplest way of formatting text.</p>
+<p>With f-strings the previous example would look like this:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">25</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The result is </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Let's break this apart. In the very beginning of the string we are printing out there is the character <em>f</em>. This tells Python that what follows is an f-string. Within the string, enclosed in curly brackets, is the variable name <code>result</code>. The value it contains becomes a part of the printed string. The printout is exactly the same as in the previous examples:</p>
+<p><sample-output></p>
+<p>The result is 250</p>
+<p></sample-output></p>
+<p>A single f-string can contain multiple variables. For example this code</p>
+<div class="codehilite"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Mark&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">37</span>
+<span class="n">city</span> <span class="o">=</span> <span class="s2">&quot;Palo Alto&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hi </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, you are </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old. You live in </span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>prints out this:</p>
+<p><sample-output></p>
+<p>Hi Mark, you are 37 years old. You live in Palo Alto.</p>
+<p></sample-output></p>
+<p>It is difficult to create a printout exactly like this using the comma notation in the <code>print</code> command. For example, this program</p>
+<div class="codehilite"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Mark&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">37</span>
+<span class="n">city</span> <span class="o">=</span> <span class="s2">&quot;Palo Alto&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;, you are&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="s2">&quot;years old. You live in&quot;</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>prints out the following:</p>
+<p><sample-output></p>
+<p>Hi Mark , you are 37 years old. You live in Palo Alto .</p>
+<p></sample-output></p>
+<p>Notice the automatically inserted whitespace between each comma-separated part of the printout. Preventing <code>print</code> from adding the extra spaces is technically possible, but not worth the trouble given that we can instead use f-strings.</p>
+<p>In its simplicity the comma notation of the <code>print</code> command can often be useful, but it does sometimes cause more trouble than it's worth. F-strings are usually a more reliable option. In part 4 you will learn more about the handy features of f-strings when it comes to formatting printouts.</p>
+<p><text-box variant="hint" name="F-strings and Python versions"></p>
+<p>If you are using an older version of Python, f-strings may not work. They were introduced in Python version 3.6. Later on during the course you will install Python on your own computer. Unfortunately, the more modern versions of Python are not always available for older operating systems. If that is the case with your computer, when there are exercises requiring the use of f-strings, you can always try them out in the in-browser exercise templates in these early parts of this course.</p>
+<p></text-box></p>
+<p><in-browser-programming-exercise name="Extra space" tmcname="part01-10b_extra_space" height=400px></p>
+<p>Your friend is working on an app for jobseekers. She sends you this bit of code:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Tim Tester&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">skill1</span> <span class="o">=</span> <span class="s2">&quot;python&quot;</span>
+<span class="n">level1</span> <span class="o">=</span> <span class="s2">&quot;beginner&quot;</span>
+<span class="n">skill2</span> <span class="o">=</span> <span class="s2">&quot;java&quot;</span>
+<span class="n">level2</span> <span class="o">=</span> <span class="s2">&quot;veteran&quot;</span>
+<span class="n">skill3</span> <span class="o">=</span> <span class="s2">&quot;programming&quot;</span>
+<span class="n">level3</span> <span class="o">=</span> <span class="s2">&quot;semiprofessional&quot;</span>
+<span class="n">lower</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">upper</span> <span class="o">=</span> <span class="mi">3000</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my name is &quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot; , I am &quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="s2">&quot;years old&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my skills are&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- &quot;</span><span class="p">,</span> <span class="n">skill1</span><span class="p">,</span> <span class="s2">&quot; (&quot;</span><span class="p">,</span> <span class="n">level1</span><span class="p">,</span> <span class="s2">&quot;)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- &quot;</span><span class="p">,</span> <span class="n">skill2</span><span class="p">,</span> <span class="s2">&quot; (&quot;</span><span class="p">,</span> <span class="n">level2</span><span class="p">,</span> <span class="s2">&quot;)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- &quot;</span><span class="p">,</span> <span class="n">skill3</span><span class="p">,</span> <span class="s2">&quot; (&quot;</span><span class="p">,</span> <span class="n">level3</span><span class="p">,</span> <span class="s2">&quot; )&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am looking for a job with a salary of&quot;</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">upper</span><span class="p">,</span> <span class="s2">&quot;euros per month&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>The program should print out <em>exactly</em> the following:</p>
+<p><sample-output></p>
+<pre>
+my name is Tim Tester, I am 20 years old
+
+my skills are
+ - python (beginner)
+ - java (veteran)
+ - programming (semiprofessional)
+
+I am looking for a job with a salary of 2000-3000 euros per month
+</pre>
+
+<p></sample-output></p>
+<p>The code works almost correctly, but not quite. This exercise has very strict tests, which check the output for every single bit of whitespace.</p>
+<p>Please fix the code so that the printout looks right. Notice especially how the comma notation in the <code>print</code> command automatically inserts a space around the different comma-separated parts.</p>
+<p>The easiest way to transform the code so that it meets requirements is to use f-strings.</p>
+<p>Hint: you can print an empty line by adding an empty <code>print</code> command, or by adding the newline character <code>\n</code> into your string.</p>
+<p>Do remember to be extra careful when formatting printouts also in the future on this course. Some of the exercises have tests that require your output to be exactly as specified in the examples given. For example, please use actual whitespace characters in your code, instead of ASCII character codes for whitespace, or some such.</p>
+<p></in-browser-programming-exercise></p>
+<h2 id="floating-point-numbers">Floating point numbers<a class="headerlink" href="#floating-point-numbers" title="Permanent link">&para;</a></h2>
+<p><code>Floating point number</code> or <em>float</em> is a term you will come across often in programming. It refers to numbers with a decimal point. They can be used much in the same way as integer values.</p>
+<p>This program calculates the mean of three floating point numbers:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">number1</span> <span class="o">=</span> <span class="mf">2.5</span>
+<span class="n">number2</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.25</span>
+<span class="n">number3</span> <span class="o">=</span> <span class="mf">3.62</span>
+
+<span class="n">mean</span> <span class="o">=</span> <span class="p">(</span><span class="n">number1</span> <span class="o">+</span> <span class="n">number2</span> <span class="o">+</span> <span class="n">number3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mean: </span><span class="si">{</span><span class="n">mean</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p><sample-output></p>
+<p>Mean: 1.6233333333333333</p>
+<p></sample-output></p>
+<p><in-browser-programming-exercise name="Arithmetics" tmcname="part01-11_arithmetics"></p>
+<p>This program already contains two integer variables, <code>x</code> and <code>y</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">27</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">15</span>
+</code></pre></div>
+
+<p>Please complete the program so that it also prints out the following:</p>
+<p><sample-output></p>
+<p>27 + 15 = 42
+27 - 15 = 12
+27 * 15 = 405
+27 / 15 = 1.8</p>
+<p></sample-output></p>
+<p>The program should work correctly even if the values of the variables are changed. That is, if the first two lines are replaced with this</p>
+<div class="codehilite"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">9</span>
+</code></pre></div>
+
+<p>the program should print out the following:</p>
+<p><sample-output></p>
+<p>4 + 9 = 13
+4 - 9 = -5
+4 * 9 = 36
+4 / 9 = 0.4444444444444444</p>
+<p></sample-output></p>
+<p></in-browser-programming-exercise></p>
+<p><in-browser-programming-exercise name="Fix the code: Print a single line" tmcname="part01-12_print_a_single_line"></p>
+<p>Each <code>print</code> command usually prints out a line of its own, complete with a change of line at the end. However, if the <code>print</code> command is given an additional argument <code>end = ""</code>, it will not print a line change.</p>
+<p>For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;there!&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p><sample-output></p>
+<p>Hi there!</p>
+<p></sample-output></p>
+<p>Please fix this program so that the entire calculation, complete with result, is printed out on a single line. Do not change the number of <code>print</code> commands used.</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; + &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; - &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; = &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">-</span> <span class="mi">4</span><span class="p">)</span>
+</code></pre></div>
+
+<p></in-browser-programming-exercise></p>
+<!--
+
+A quiz to review the contents of this section:
+
+<quiz id="49bf296e-41d1-5982-89a9-c784b630eaee"></quiz>
+
+-->
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.path"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.26.0/full/pyodide.js"></script>
+      
+        <script src="../../js/editor.js"></script>
+      
+    
+  </body>
+</html>

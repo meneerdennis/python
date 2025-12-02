@@ -1,0 +1,827 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Leerpad Python voor leerlingen">
+      
+      
+        <meta name="author" content="Jij :)">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Conditional statements - Python Cursus</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    
+      <link rel="stylesheet" href="../../css/editor-styles.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#comparison-operators" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Python Cursus" class="md-header__button md-logo" aria-label="Python Cursus" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Cursus
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conditional statements
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Cursus" class="md-nav__button md-logo" aria-label="Python Cursus" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Python Cursus
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hoofdstuk 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hoofdstuk 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/H1/1-getting-started" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison operators
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boolean-values-and-boolean-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boolean values and Boolean expressions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Conditional statements</h1>
+
+<p><text-box variant='learningObjectives' name="Learning objectives"></p>
+<p>After this section</p>
+<ul>
+<li>You will be able to use a simple conditional statement in programming</li>
+<li>You will know what a Boolean value is</li>
+<li>You will be able to express conditionals with comparison operators</li>
+</ul>
+<p></text-box></p>
+<p>Thus far, every program we have written has been executed line by line in order. Instead of executing every line of code every single time a program is run, it is often useful to create sections of the program which are only executed in certain situations.</p>
+<p>For example, the following code checks whether the user is of age:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;How old are you? &quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">17</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You are of age!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Here&#39;s a copy of GTA6 for you.&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Next customer, please!&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>When the user is over the age of 17, the execution of the program should look like this:</p>
+<p><sample-output></p>
+<p>How old are you? <strong>18</strong>
+You are of age!
+Here's a copy of GTA6 for you.
+Next customer, please!</p>
+<p></sample-output></p>
+<p>If the user is 17 or under, only this is printed out:</p>
+<p><sample-output></p>
+<p>How old are you? <strong>16</strong>
+Next customer, please!</p>
+<p></sample-output></p>
+<p>These examples show us that the value given as input affects which parts of the program are executed. The program contains a <em>conditional statement</em> with a block of code which is executed only if the condition in the statement is true.</p>
+<p><img src="1_5_1.png"></p>
+<p>In a conditional statement the keyword <code>if</code> is followed by a <em>condition</em>, such as a comparison of two values. The code block following this header line is only executed if the condition is true.</p>
+<p>Notice the colon character following the <code>if</code> header. In the following code there is no colon:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># no colon at the end of the following line</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">17</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You are of age.&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Upon execution this causes an error:</p>
+<p><sample-output></p>
+<pre>
+File "program.py", line 3
+  if age > 17
+            ^
+SyntaxError: invalid syntax
+</pre>
+<p></sample-output></p>
+<h2 id="comparison-operators">Comparison operators<a class="headerlink" href="#comparison-operators" title="Permanent link">&para;</a></h2>
+<p>Very typically conditions consist of comparing two values. Here is a table with the most common comparison operators used in Python:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Operator</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>==</code></td>
+<td>Equal to</td>
+<td><code>a == b</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>!=</code></td>
+<td>Not equal to</td>
+<td><code>a != b</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>&gt;</code></td>
+<td>Greater than</td>
+<td><code>a &gt; b</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>&gt;=</code></td>
+<td>Greater than or equal to</td>
+<td><code>a &gt;= b</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>&lt;</code></td>
+<td>Less than</td>
+<td><code>a &lt; b</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>&lt;=</code></td>
+<td>Less than or equal to</td>
+<td><code>a &lt;= b</code></td>
+</tr>
+</tbody>
+</table>
+<p>Let's have a look at a program which prints out different things based on whether the number the user inputs is negative, positive, or equal to zero:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please type in a number: &quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is negative.&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is positive.&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is zero.&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Examples of how the program functions with three different inputs:</p>
+<p><sample-output></p>
+<p>Please type in a number: <strong>15</strong>
+The number is positive.</p>
+<p></sample-output></p>
+<p><sample-output></p>
+<p>Please type in a number: <strong>-18</strong>
+The number is negative.</p>
+<p></sample-output></p>
+<p><sample-output></p>
+<p>Please type in a number: <strong>0</strong>
+The number is zero.</p>
+<p></sample-output></p>
+<h2 id="indentation">Indentation<a class="headerlink" href="#indentation" title="Permanent link">&para;</a></h2>
+<p>Python recognises that a block of code is part of a conditional statement if each line of code in the block is <em>indented</em> the same. That is, there should be a bit of whitespace at the beginning of every line of code within the code block. Each line should have the same amount of whitespace.</p>
+<p>For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please type in a password: &quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">password</span> <span class="o">==</span> <span class="s2">&quot;kittycat&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You knew the password!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You must be either the intended user...&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;...or quite an accomplished hacker.&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The program has finished its execution. Thanks and bye!&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>You can use the Tab key, short for <em>tabulator</em> key, to insert a set amount of whitespace.</p>
+<p><img src="1_5_keyboard.png"></p>
+<p>Many text editors will automatically indent the following line when the Enter key is pressed after a colon character. When you want to end an indented code block you can use the <code>Backspace</code> key to return to the beginning of the line.</p>
+<p><img src="1_5_keyboard2.png">
+<small><center>
+The source of the keyboard pictures:
+ <a href="https://pixabay.com/users/Clker-Free-Vector-Images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=311803">Clker-Free-Vector-Images</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=311803">Pixabay</a>
+</center></small></p>
+<p><in-browser-programming-exercise name="Orwell" tmcname="part01-21_orwell"></p>
+<p>Please write a program which asks the user for an integer number. The program should print out "Orwell" if the number is exactly 1984, and otherwise do nothing.</p>
+<p><sample-output></p>
+<p>Please type in a number: <strong>2020</strong></p>
+<p></sample-output></p>
+<p><sample-output></p>
+<p>Please type in a number: <strong>1984</strong>
+Orwell</p>
+<p></sample-output></p>
+<p></in-browser-programming-exercise></p>
+<p><in-browser-programming-exercise name="Absolute value" tmcname="part01-22_absolute_value"></p>
+<p>Please write a program which asks the user for an integer number. If the number is less than zero, the program should print out the number multiplied by -1. Otherwise the program prints out the number as is. Please have a look at the examples of expected behaviour below.</p>
+<p><sample-output></p>
+<p>Please type in a number: <strong>-7</strong>
+The absolute value of this number is 7</p>
+<p></sample-output></p>
+<p><sample-output></p>
+<p>Please type in a number: <strong>1</strong>
+The absolute value of this number is 1</p>
+<p></sample-output></p>
+<p><sample-output></p>
+<p>Please type in a number: <strong>-99</strong>
+The absolute value of this number is 99</p>
+<p></sample-output></p>
+<p></in-browser-programming-exercise></p>
+<p><in-browser-programming-exercise name="Soup or no soup" tmcname="part01-23_soup_or_no_soup"></p>
+<p>Please write a program which asks for the user's name. If the name is anything but "Jerry", the program then asks for the number of portions and prints out the total cost. The price of a single portion is 5.90.</p>
+<p>Two examples of the program's execution:</p>
+<p><sample-output></p>
+<p>Please tell me your name: <strong>Kramer</strong>
+How many portions of soup? <strong>2</strong>
+The total cost is 11.8
+Next please!</p>
+<p></sample-output></p>
+<p><sample-output></p>
+<p>Please tell me your name: <strong>Jerry</strong>
+Next please!</p>
+<p></sample-output></p>
+<p></in-browser-programming-exercise></p>
+<p><in-browser-programming-exercise name="Order of magnitude" tmcname="part01-24_order_of_magnitude"></p>
+<p>Please write a program which asks the user for an integer number. The program should then print out the magnitude of the number according to the following examples.</p>
+<p><sample-output></p>
+<p>Please type in a number: <strong>950</strong>
+This number is smaller than 1000
+Thank you!</p>
+<p></sample-output></p>
+<p><sample-output></p>
+<p>Please type in a number: <strong>59</strong>
+This number is smaller than 1000
+This number is smaller than 100
+Thank you!</p>
+<p></sample-output></p>
+<p><sample-output></p>
+<p>Please type in a number: <strong>2</strong>
+This number is smaller than 1000
+This number is smaller than 100
+This number is smaller than 10
+Thank you!</p>
+<p></sample-output></p>
+<p><sample-output></p>
+<p>Please type in a number: <strong>1123</strong>
+Thank you!</p>
+<p></sample-output></p>
+<p></in-browser-programming-exercise></p>
+<h2 id="boolean-values-and-boolean-expressions">Boolean values and Boolean expressions<a class="headerlink" href="#boolean-values-and-boolean-expressions" title="Permanent link">&para;</a></h2>
+<p>Any condition used in a conditional statement will result in a truth value, that is, either true or false. For example, the condition <code>a &lt; 5</code> is true if <code>a</code> is less than 5, and false if <code>a</code> is equal to or greater than 5.</p>
+<p>These types of values are often called <em>Boolean</em> values, named after the English mathematician George Boole. In Python they are handled by the <code>bool</code> data type. Variables of type <code>bool</code> can only have two values: <code>True</code> or <code>False</code>.</p>
+<p>Any bit of code that results in a Boolean value is called a <em>Boolean expression</em>. For example, the condition in a conditional statement is always a Boolean expression, and the words <em>condition</em> and <em>Boolean expression</em> can often be used interchangeably.</p>
+<p>The result of a Boolean expression can be stored in a variable just like the result of any numerical calculation:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">condition</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a is less than 5&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p><sample-output></p>
+<p>True
+a is less than 5</p>
+<p></sample-output></p>
+<p>The Python keywords <code>True</code> and <code>False</code> can also be used directly. In the following example the <code>print</code> command is executed every time, because the value of the condition is <code>True</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">condition</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is printed every time.&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p><sample-output></p>
+<p>This is printed every time.</p>
+<p></sample-output></p>
+<p>A program like this is not very useful, but later on during the course you will see examples of Boolean variables coming in very handy.</p>
+<p><in-browser-programming-exercise name="Calculator" tmcname="part01-25_calculator"></p>
+<p>Please write a program which asks the user for two numbers and an operation. If the operation is <em>add</em>, <em>multiply</em> or <em>subtract</em>, the program should calculate and print out the result of the operation with the given numbers. If the user types in anything else, the program should print out nothing.</p>
+<p>Some examples of expected behaviour:</p>
+<p><sample-output></p>
+<p>Number 1: <strong>10</strong>
+Number 2: <strong>17</strong>
+Operation: <strong>add</strong></p>
+<p>10 + 17 = 27</p>
+<p></sample-output></p>
+<p><sample-output></p>
+<p>Number 1: <strong>4</strong>
+Number 2: <strong>6</strong>
+Operation: <strong>multiply</strong></p>
+<p>4 * 6 = 24</p>
+<p></sample-output></p>
+<p><sample-output></p>
+<p>Number 1: <strong>4</strong>
+Number 2: <strong>6</strong>
+Operation: <strong>subtract</strong></p>
+<p>4 - 6 = -2</p>
+<p></sample-output></p>
+<p></in-browser-programming-exercise></p>
+<p><in-browser-programming-exercise name="Temperatures" tmcname="part01-26_temperatures"></p>
+<p>Please write a program which asks the user for a temperature in degrees Fahrenheit, and then prints out the same in degrees Celsius. If the converted temperature falls below zero degrees Celsius, the program should also print out "Brr! It's cold in here!".</p>
+<p>The formula for converting degrees Fahrenheit to degrees Celsius can be found easily by any search engine of your choice.</p>
+<p>Two examples of expected behaviour:</p>
+<p><sample-output></p>
+<p>Please type in a temperature (F): <strong>101</strong>
+101 degrees Fahrenheit equals 38.333333333333336 degrees Celsius</p>
+<p>Please type in a temperature (F): <strong>21</strong>
+21 degrees Fahrenheit equals -6.111111111111111 degrees Celsius
+Brr! It's cold in here!</p>
+<p></sample-output></p>
+<p></in-browser-programming-exercise></p>
+<p><in-browser-programming-exercise name="Daily wages" tmcname="part01-27_daily_wages"></p>
+<p>Please write a program which asks for the hourly wage, hours worked, and the day of the week. The program should then print out the daily wages, which equal hourly wage multiplied by hours worked, except on Sundays when the hourly wage is doubled.</p>
+<p><sample-output></p>
+<p>Hourly wage: <strong>8.5</strong>
+Hours worked: <strong>3</strong>
+Day of the week: <strong>Monday</strong>
+Daily wages: 25.5 euros</p>
+<p></sample-output></p>
+<p><sample-output></p>
+<p>Hourly wage: <strong>12.5</strong>
+Hours worked: <strong>10</strong>
+Day of the week: <strong>Sunday</strong>
+Daily wages: 250.0 euros</p>
+<p></sample-output></p>
+<p></in-browser-programming-exercise></p>
+<p><in-browser-programming-exercise name="Loyalty bonus" tmcname="part01-28_loyalty_bonus"></p>
+<p>This program calculates the end of year bonus a customer receives on their loyalty card. The bonus is calculated with the following formula:</p>
+<ul>
+<li>If there are less than a hundred points on the card, the bonus is 10 %</li>
+<li>In any other case the bonus is 15 %</li>
+</ul>
+<p>The program should work like this:</p>
+<p><sample-output></p>
+<p>How many points are on your card? <strong>55</strong>
+Your bonus is 10 %
+You now have 60.5 points</p>
+<p></sample-output></p>
+<p>But there is a problem with the program, so with some inputs it doesn't work quite right:</p>
+<p><sample-output></p>
+<p>How many points are on your card? <strong>95</strong>
+Your bonus is 10 %
+Your bonus is 15 %
+You now have 120.175 points</p>
+<p></sample-output></p>
+<p>Please fix the program so that there is always either a 10 % or a 15 % bonus, but never both.</p>
+<p></in-browser-programming-exercise></p>
+<p><in-browser-programming-exercise name="What to wear tomorrow" tmcname="part01-29_what_to_wear_tomorrow"></p>
+<p>Please write a program which asks for tomorrow's weather forecast and then suggests weather-appropriate clothing.</p>
+<p>The suggestion should change if the temperature (measured in degrees Celsius) is over 20, 10 or 5 degrees, and also if there is rain on the radar.</p>
+<p>Some examples of expected behaviour:</p>
+<p><sample-output></p>
+<p>What is the weather forecast for tomorrow?
+Temperature: <strong>21</strong>
+Will it rain (yes/no): <strong>no</strong>
+Wear jeans and a T-shirt</p>
+<p></sample-output></p>
+<p><sample-output></p>
+<p>What is the weather forecast for tomorrow?
+Temperature: <strong>11</strong>
+Will it rain (yes/no): <strong>no</strong>
+Wear jeans and a T-shirt
+I recommend a jumper as well</p>
+<p></sample-output></p>
+<p><sample-output></p>
+<p>What is the weather forecast for tomorrow?
+Temperature: <strong>7</strong>
+Will it rain (yes/no): <strong>no</strong>
+Wear jeans and a T-shirt
+I recommend a jumper as well
+Take a jacket with you</p>
+<p></sample-output></p>
+<p><sample-output></p>
+<p>What is the weather forecast for tomorrow?
+Temperature: <strong>3</strong>
+Will it rain (yes/no): <strong>yes</strong>
+Wear jeans and a T-shirt
+I recommend a jumper as well
+Take a jacket with you
+Make it a warm coat, actually
+I think gloves are in order
+Don't forget your umbrella!</p>
+<p></sample-output></p>
+<p></in-browser-programming-exercise></p>
+<p><in-browser-programming-exercise name="Solving a quadratic equation" tmcname="part01-30_quadratic_formula"></p>
+<p>In the Python <code>math</code> module there is the function <code>sqrt</code>, which calculates the square root of a number. You can use it like so:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span>
+</code></pre></div>
+
+<p>This should print out</p>
+<p><sample-output></p>
+<p>3.0</p>
+<p></sample-output></p>
+<p>We will return to the concept of a <em>module</em> and the <code>import</code> statement later. For now, it is sufficient to understand that the line <code>from math import sqrt</code> allows us to use the <code>sqrt</code> function in our program.</p>
+<p>Please write a program for solving a quadratic equation of the form ax²+bx+c. The program asks for values a, b and c. It should then use the quadratic formula to solve the equation. The quadratic formula expressed with the Python <code>sqrt</code> function is as follows:</p>
+<p>x = (-b ± sqrt(b²-4ac))/(2a).</p>
+<p>You can assume the equation will always have two real roots, so the above formula will always work.</p>
+<p>An example of expected behaviour:</p>
+<p><sample-output></p>
+<p>Value of a: <strong>1</strong>
+Value of b: <strong>2</strong>
+Value of c: <strong>-8</strong></p>
+<p>The roots are 2.0 and -4.0</p>
+<p></sample-output></p>
+<p></in-browser-programming-exercise></p>
+<!--
+
+A quiz to review the contents of this section:
+
+<quiz id="bc7e500f-a91e-5709-8ae6-34637ff01737"></quiz>
+
+-->
+
+<p>Please respond to a quick questionnaire on this week's materials. The questionnaire is worth one exercise point.</p>
+<p><quiz id="9ee2113a-a265-5bd2-9609-1f9c2298fe02"></quiz></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.path"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.26.0/full/pyodide.js"></script>
+      
+        <script src="../../js/editor.js"></script>
+      
+    
+  </body>
+</html>

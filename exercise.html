@@ -1,20 +1,29 @@
-<div class="python-editor"
-     data-initial-code="{{ code | default(\"def som(a, b):\\n    return 0\") }}"
-     data-tests="{{ tests | default('[]') }}">
-</div>
-
-<button class="python-run">Run</button>
-<button class="python-check">Nakijken</button>
-
-<div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:0.5rem;">
-  <div style="flex:1; min-width:220px;">
-    <strong>Output:</strong>
-    <pre class="python-output"
-         style="background:#272822; color:#f8f8f2; padding:10px; min-height:80px;"></pre>
+<div class="exercise-container">
+  <div class="exercise-header">
+    <div class="exercise-actions">
+      <button class="python-run">Run Code</button>
+      <button class="python-check">Check Tests</button>
+    </div>
   </div>
-  <div style="flex:1; min-width:220px;">
-    <strong>Tests:</strong>
-    <pre class="python-feedback"
-         style="background:#1e1e1e; color:#f8f8f2; padding:10px; min-height:80px;"></pre>
+
+  <div class="python-editor-container">
+    <div
+      class="python-editor"
+      data-initial-code="{{ code | default('def som(a, b):
+    return 0') }}"
+      data-tests="{{ tests | default('[]') }}"
+    ></div>
+  </div>
+
+  <div class="exercise-content">
+    <div class="exercise-panel">
+      <div class="exercise-panel-title">Output</div>
+      <pre class="python-output"></pre>
+    </div>
+
+    <div class="exercise-panel tests-panel">
+      <div class="exercise-panel-title">Test Results</div>
+      <pre class="python-feedback"></pre>
+    </div>
   </div>
 </div>

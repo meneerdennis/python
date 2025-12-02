@@ -1,0 +1,668 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Leerpad Python voor leerlingen">
+      
+      
+        <meta name="author" content="Jij :)">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Getting started - Python Cursus</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    
+      <link rel="stylesheet" href="../../css/editor-styles.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#een-programma-met-meerdere-commandos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Python Cursus" class="md-header__button md-logo" aria-label="Python Cursus" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Cursus
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting started
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Cursus" class="md-nav__button md-logo" aria-label="Python Cursus" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Python Cursus
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hoofdstuk 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hoofdstuk 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/H1/1-getting-started" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#een-programma-met-meerdere-commandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Een programma met meerdere commando's
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rekenkundige-bewerkingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rekenkundige bewerkingen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commentaren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commentaren
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Getting started</h1>
+
+<p><text-box variant='learningObjectives' name='Learning objectives'></p>
+<p>Na deze sectie:</p>
+<ul>
+<li>Heb je je eerste Python-programma geschreven en uitgevoerd</li>
+<li>Weet je hoe je het print-commando gebruikt</li>
+<li>Kun je programmeren gebruiken voor rekenkundige bewerkingen</li>
+</ul>
+<p></text-box></p>
+<p>Computerprogramma's bestaan uit <em>commando's</em>, waarbij elk commando de computer instrueert om een bepaalde actie uit te voeren. Een computer voert deze commando's één voor één uit. Onder andere kunnen commando's gebruikt worden voor berekeningen, dingen in het geheugen van de computer te vergelijken, veranderingen teweeg te brengen in hoe het programma functioneert, berichten door te geven of informatie te vragen aan de gebruiker van het programma.</p>
+<p>Laten we beginnen met programmeren door vertrouwd te raken met het <code>print</code> commando, dat tekst <em>afdrukt</em>. In deze context betekent afdrukken in wezen dat het programma wat tekst op het scherm zal tonen.</p>
+<p>Het volgende programma zal de regel "Hi there!" afdrukken:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi there!&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Wanneer het programma wordt uitgevoerd, produceert het dit:</p>
+<p><sample-output></p>
+<p>Hi there!</p>
+<p></sample-output></p>
+<p>Het programma zal niet werken tenzij de code exact geschreven wordt zoals hierboven. Bijvoorbeeld, proberen het print commando uit te voeren zonder de aanhalingstekens, zoals dit</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">Hi</span> <span class="n">there</span><span class="err">!</span><span class="p">)</span>
+</code></pre></div>
+
+<p>zal het bericht niet afdrukken, maar in plaats daarvan een fout veroorzaken:</p>
+<p><sample-output></p>
+<pre>
+File "<stdin>", line 1
+  print(Hi there!)
+                   ^
+SyntaxError: invalid syntax
+</pre>
+
+<p></sample-output></p>
+<p>Samenvattend, als je tekst wilt afdrukken, moet de tekst volledig tussen aanhalingstekens staan, anders zal Python het niet correct interpreteren.</p>
+<p>Schrijf een programma dat een emoticon afdrukt: :-)</p>
+<div class="exercise-container">
+  <div class="exercise-header">
+    <div class="exercise-actions">
+      <button class="python-run">Run Code</button>
+      <button class="python-check">Check Tests</button>
+    </div>
+  </div>
+
+  <div class="python-editor-container">
+    <div
+      class="python-editor"
+      data-initial-code="
+
+# schrijf hier je code:
+
+"
+      data-tests="
+[
+{ "syntax": "print(\":-)\")" }
+]
+"
+    ></div>
+  </div>
+
+  <div class="exercise-content">
+    <div class="exercise-panel">
+      <div class="exercise-panel-title">Output</div>
+      <pre class="python-output"></pre>
+    </div>
+
+    <div class="exercise-panel tests-panel">
+      <div class="exercise-panel-title">Test Results</div>
+      <pre class="python-feedback"></pre>
+    </div>
+  </div>
+</div>
+
+<div class="exercise-container">
+  <div class="exercise-header">
+    <div class="exercise-actions">
+      <button class="python-run">Run Code</button>
+      <button class="python-check">Check Tests</button>
+    </div>
+  </div>
+
+  <div class="python-editor-container">
+    <div
+      class="python-editor"
+      data-initial-code="
+
+# schrijf hier je code:
+
+"
+      data-tests="
+[
+{ "syntax": "print(\":-)\")" }
+]
+"
+    ></div>
+  </div>
+
+  <div class="exercise-content">
+    <div class="exercise-panel">
+      <div class="exercise-panel-title">Output</div>
+      <pre class="python-output"></pre>
+    </div>
+
+    <div class="exercise-panel tests-panel">
+      <div class="exercise-panel-title">Test Results</div>
+      <pre class="python-feedback"></pre>
+    </div>
+  </div>
+</div>
+
+<h2 id="een-programma-met-meerdere-commandos">Een programma met meerdere commando's<a class="headerlink" href="#een-programma-met-meerdere-commandos" title="Permanent link">&para;</a></h2>
+<p>Meerdere commando's die achter elkaar geschreven worden zullen in volgorde van eerste tot laatste worden uitgevoerd.
+Bijvoorbeeld dit programma</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Introduction to Programming!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First we will practice using the print command.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This program prints three lines of text on the screen.&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>drukt de volgende regels af op het scherm:</p>
+<p><sample-output></p>
+<p>Welcome to Introduction to Programming!
+First we will practice using the print command.
+This program prints three lines of text on the screen.</p>
+<p></sample-output></p>
+<p><in-browser-programming-exercise name="Fix the code: Seven Brothers" tmcname="part01-02_seven_brothers"></p>
+<p>"Seitsemän veljestä" is een van de eerste romans die ooit in het Fins geschreven werd. Het verhaal gaat over zeven weesbroers die leren hun weg te vinden in de wereld (<a href="https://en.wikipedia.org/wiki/Seitsem%C3%A4n_veljest%C3%A4">lees meer op Wikipedia</a>).</p>
+<p>Dit programma zou de namen van de broers in alfabetische volgorde moeten afdrukken, maar het werkt nog niet helemaal goed. Repareer het programma zodat de namen in de juiste volgorde worden afgedrukt.</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Simeoni&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Juhani&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eero&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lauri&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aapo&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tuomas&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Timo&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p></in-browser-programming-exercise></p>
+<p><in-browser-programming-exercise name="Row, Row, Row Your Boat" tmcname="part01-03_row_your_boat"></p>
+<p>Schrijf een programma dat de volgende regels exact afdrukt zoals ze hier geschreven staan, inclusief alle leestekens:</p>
+<p><sample-output></p>
+<p>Row, row, row your boat,
+Gently down the stream.
+Merrily, merrily, merrily, merrily,
+Life is but a dream.</p>
+<p></sample-output></p>
+<p></in-browser-programming-exercise></p>
+<h2 id="rekenkundige-bewerkingen">Rekenkundige bewerkingen<a class="headerlink" href="#rekenkundige-bewerkingen" title="Permanent link">&para;</a></h2>
+<p>Je kunt ook rekenkundige bewerkingen in een <code>print</code> commando plaatsen. Door het uit te voeren wordt het resultaat van de bewerking afgedrukt. Bijvoorbeeld, het volgende programma</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+
+<p>drukt deze regels af:</p>
+<p><sample-output></p>
+<p>7
+9
+22</p>
+<p></sample-output></p>
+<p>Let op het ontbreken van aanhalingstekens rond de rekenkundige bewerkingen hierboven. Aanhalingstekens worden gebruikt om <em>strings</em> aan te duiden. In de context van programmeren zijn strings reeksen van karakters. Ze kunnen bestaan uit letters, cijfers en elk ander type karakters, zoals leestekens. Strings zijn niet alleen woorden zoals we ze gewoonlijk begrijpen, maar in plaats daarvan kan een enkele string zo lang zijn als meerdere volledige zinnen.
+Strings worden meestal exact afgedrukt zoals ze geschreven zijn. Zo produceren de volgende twee commando's twee heel verschillende resultaten:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 + 2 * 10&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Dit programma drukt af:</p>
+<p><sample-output></p>
+<p>22
+2 + 2 * 10</p>
+<p></sample-output></p>
+<p>Met de tweede regel code berekent Python niet het resultaat van de bewerking, maar drukt in plaats daarvan de bewerking zelf af, als een string.
+Dus, strings worden afgedrukt precies zoals ze geschreven zijn, zonder enige verwijzing naar hun inhoud.</p>
+<h2 id="commentaren">Commentaren<a class="headerlink" href="#commentaren" title="Permanent link">&para;</a></h2>
+<p>Elke regel die begint met het pond-teken <code>#</code>, ook bekend als een hash of een nummerteken, is een commentaar. Dit betekent dat alle tekst op die regel na het <code>#</code> symbool op geen enkele manier van invloed is op hoe het programma functioneert. Python zal het gewoon negeren.</p>
+<p>Commentaren worden gebruikt om uit te leggen hoe een programma werkt, zowel voor de programmeur zelf als voor anderen die de programmacode lezen. In dit programma legt een commentaar de berekening uit die in de code wordt uitgevoerd:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hours in a year:&quot;</span><span class="p">)</span>
+<span class="c1"># er zijn 365 dagen in een jaar en 24 uur per dag</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="mi">24</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Wanneer het programma wordt uitgevoerd, zal het commentaar niet zichtbaar zijn voor de gebruiker:</p>
+<p><sample-output></p>
+<p>Hours in a year:
+8760</p>
+<p></sample-output></p>
+<p>Korte commentaren kunnen ook toegevoegd worden aan het einde van een regel:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hours in a year:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="mi">24</span><span class="p">)</span> <span class="c1"># 365 dagen, 24 uur per dag</span>
+</code></pre></div>
+
+<p><in-browser-programming-exercise name="Minutes in a year" tmcname="part01-04_minutes_in_a_year"></p>
+<p>Schrijf een programma dat het aantal minuten in een jaar afdrukt. Gebruik Python code om de berekening uit te voeren, zoals in het vorige codevoorbeeld.</p>
+<p></in-browser-programming-exercise></p>
+<p><in-browser-programming-exercise name="Print some code" tmcname="part01-05_print_code"></p>
+<p>Tot nu toe heb je waarschijnlijk dubbele aanhalingstekens <code>"</code> gebruikt om strings af te drukken. Naast de dubbele aanhalingstekens accepteert Python ook enkele aanhalingstekens <code>'</code>.</p>
+<p>Dit komt van pas als je ooit de aanhalingstekens zelf wilt afdrukken:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&quot;Come right back!&quot;, shouted the police officer.&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<p><sample-output></p>
+<p>"Come right back!", shouted the police officer.</p>
+<p></sample-output></p>
+<p>Schrijf een programma dat het volgende afdrukt:</p>
+<p><sample-output></p>
+<p>print("Hello there!")</p>
+<p></sample-output></p>
+<p></in-browser-programming-exercise></p>
+<!--
+
+Een quiz om de inhoud van deze sectie te herzien:
+
+<quiz id="f1d6d205-dfd6-5c6f-b148-b332dfd64289"></quiz>
+
+-->
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.path"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.26.0/full/pyodide.js"></script>
+      
+        <script src="../../js/editor.js"></script>
+      
+    
+  </body>
+</html>
