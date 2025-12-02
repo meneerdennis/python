@@ -1,7 +1,5 @@
 # Hoofdstuk 1 – Eerste Python-code
 
-test
-
 ## Oefening 1 – Standaard editor
 
 {% include 'editor.html' %}
