@@ -61,30 +61,83 @@
   border-left: 4px solid var(--success-color);
 }
 
-/* CodeMirror Theme Overrides */
+/* CodeMirror Theme Overrides - Improved Contrast */
+.python-editor .CodeMirror {
+  color: #e2e8f0 !important;
+}
+
 .python-editor .CodeMirror-gutters {
-  background: #2d3748 !important;
-  border-right: 1px solid #4a5568 !important;
-  color: #a0aec0 !important;
+  background: #1a202c !important;
+  border-right: 2px solid #2d3748 !important;
+  color: #cbd5e0 !important;
 }
 
 .python-editor .CodeMirror-linenumber {
-  color: #718096 !important;
+  color: #a0aec0 !important;
   padding: 0 8px !important;
+  font-weight: 500 !important;
 }
 
 .python-editor .CodeMirror-cursor {
-  border-left: 2px solid #4299e1 !important;
+  border-left: 2px solid #63b3ed !important;
 }
 
 .python-editor .CodeMirror-selected {
-  background: rgba(66, 153, 225, 0.3) !important;
+  background: rgba(66, 153, 225, 0.4) !important;
 }
 
 .python-editor .CodeMirror-line::selection,
 .python-editor .CodeMirror-line > span::selection,
 .python-editor .CodeMirror-line > span > span::selection {
-  background: rgba(66, 153, 225, 0.3) !important;
+  background: rgba(66, 153, 225, 0.4) !important;
+}
+
+/* Syntax Highlighting - High Contrast */
+.python-editor .cm-keyword {
+  color: #f687b3 !important;
+  font-weight: 600 !important;
+}
+.python-editor .cm-operator {
+  color: #90cdf4 !important;
+}
+.python-editor .cm-variable {
+  color: #68d391 !important;
+}
+.python-editor .cm-variable-2 {
+  color: #68d391 !important;
+}
+.python-editor .cm-def {
+  color: #90cdf4 !important;
+  font-weight: 600 !important;
+}
+.python-editor .cm-string {
+  color: #fbd38d !important;
+}
+.python-editor .cm-number {
+  color: #f6ad55 !important;
+  font-weight: 600 !important;
+}
+.python-editor .cm-comment {
+  color: #a0aec0 !important;
+  font-style: italic !important;
+}
+.python-editor .cm-builtin {
+  color: #fc8181 !important;
+  font-weight: 600 !important;
+}
+.python-editor .cm-type {
+  color: #90cdf4 !important;
+}
+.python-editor .cm-meta {
+  color: #cbd5e0 !important;
+}
+.python-editor .cm-error {
+  color: #fc8181 !important;
+  background: rgba(252, 129, 129, 0.1) !important;
+}
+.python-editor .CodeMirror-matchingbracket {
+  background: rgba(104, 211, 145, 0.2) !important;
+  border: 1px solid #68d391 !important;
 }
 
 /* ===== BUTTONS ===== */
@@ -178,21 +231,22 @@
 /* ===== OUTPUT AREAS ===== */
 .python-output,
 .python-feedback {
-  background: #1e1e1e !important;
-  color: #f8f9fa !important;
-  border: 1px solid #374151;
+  background: #0f1419 !important;
+  color: #e6edf3 !important;
+  border: 2px solid #30363d;
   border-radius: var(--radius-md);
   padding: 1rem;
   font-family: "JetBrains Mono", "Fira Code", "SF Mono", Monaco, "Cascadia Code",
     "Roboto Mono", Consolas, "Courier New", monospace;
-  font-size: 0.875rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.7;
   min-height: 120px;
   max-height: 300px;
   overflow-y: auto;
   position: relative;
   white-space: pre-wrap;
   word-break: break-word;
+  font-weight: 400;
 }
 
 .python-output {
@@ -205,7 +259,7 @@
 
 .python-output.has-error {
   border-left-color: var(--error-color);
-  background: #1a1a1a !important;
+  background: #0d1117 !important;
 }
 
 .python-output.has-success {
